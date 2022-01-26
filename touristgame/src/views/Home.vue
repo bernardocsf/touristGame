@@ -105,7 +105,7 @@ export default {
     login() {
       if (this.isUser(this.usernameLogin, this.passwordLogin)) {
         this.SET_LOGGED_USER(this.usernameLogin);
-        this.$router.push({ name: "about" });
+        this.$router.push({ name: "About" });
       } else {
         alert("Conta não registada!");
       }
@@ -139,7 +139,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
