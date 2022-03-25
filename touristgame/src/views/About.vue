@@ -13,7 +13,7 @@
       <h3 id="msgDistritosMovimentados">Caso queiras visitar cidades mais movimentadas...</h3>
       <div>
         <img id="imgDistritosMovimentados" src="../assets/images/distritosMovimentados.svg"> 
-        <router-link><img id="cardImgLisboa1" src="../assets/images/lisboa.svg" @click="distritos()"></router-link>
+        <img id="cardImgLisboa1" src="../assets/images/lisboa.svg">
       </div>
     </div>
     <div id="distritosTranquilos">

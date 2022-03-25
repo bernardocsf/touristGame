@@ -28,11 +28,12 @@ export default new Vuex.Store({
         }
       ],
 
-      distritos: localStorage.distritos
-      ? JSON.parse(localStorage.distritos)
-      : [
+    distritos: localStorage.distritos
+    ? JSON.parse(localStorage.distritos)
+    : [
         {
           name: "Lisboa",
+          foto: "../assets/images/lisboa.svg",
           info: "Lisboa, terra das sete colinas, terra de Fernando Pessoa. Uma cidade para se apaixonar a primeira vista, no qual encontrará a combinação perfeita que todo viajante procura: beleza, cultura, gastronomia, com um excelente custo-benefício. Para te ajudar a programar sua viagem, listamos abaixo os pontos turísticos que mais recomendamos visitar. A lista está organizada em uma mistura de mais recomendado para menos recomendado, porém pontos turísticos que são próximas, estão agrupados na lista para te ajudar a planejar melhor. Caso tenha mais tempo em Portugal, não deixe de visitar nossas outras seções do site, com dicas de viagens bate-e-volta e outros lugares para visitar.",
           ppt1: "../assets/images/pptL1.svg",
           ppt2: "../assets/images/pptL2.svg",
