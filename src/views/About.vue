@@ -1,7 +1,7 @@
 <template>
   <div id="about">
     <div id="nav">
-        <img id="tgMenu" src='../assets/images/TG2.svg'> 
+        <img id="tgMenu" src='https://istprogg.sirv.com/TG2.svg'> 
         <a href="#msgDistritos">Cidades</a>
         <a href="#msgJogos">Jogos</a> 
         <a href="#msgAbout">Quadro de líderes</a> 
@@ -12,14 +12,14 @@
     <div>
       <h3 id="msgDistritosMovimentados">Caso queiras visitar cidades mais movimentadas...</h3>
       <div>
-        <img id="imgDistritosMovimentados" src="../assets/images/distritosMovimentados.svg"> 
-        <img id="cardImgLisboa1" src="../assets/images/lisboa.svg">
+        <img id="imgDistritosMovimentados" src="https://istprogg.sirv.com/distritosMovimentados.svg"> 
+        <img id="cardImgLisboa1" src="https://istprogg.sirv.com/distritosMovimentados.svg">
       </div>
     </div>
     <div id="distritosTranquilos">
      <h3 id="msgDistritosTranquilos">Preferes desfrutar de uma cidade mais tranquila?</h3>
       <div>
-        <img id="imgDistritosTranquilos" src="../assets/images/distritosTranquilos.svg"> 
+        <img id="imgDistritosTranquilos" src="https://istprogg.sirv.com/distritosTranquilos.svg"> 
       </div>
     </div>
   </div>
@@ -37,7 +37,7 @@
   text-align: center;
   color: #2c3e50;
   background-color: #8DC2D1;
-  background-image: url('../assets/images/vetores.svg');;
+  background-image: url('https://istprogg.sirv.com/vetores.svg');;
   background-attachment: fixed;
   background-size: 100%;
 }

@@ -1,17 +1,22 @@
 <template>
   <div id="app" >
-    <div id="nav">
-      <img id="tgMenu" src='../assets/images/TG1.svg'> 
-      <a href="#msgDistritos">Cidades</a>
-      <a href="#msgJogos">Jogos</a> 
-      <a href="#msgAbout">Sobre nós</a> 
-      <b-button id="registarBtn" v-b-modal.registarModal>Registar</b-button>
+    <div class="topnav">
+      <img src='https://istprogg.sirv.com/tgMenu.svg'>
+      <div class="topnav-right">
+        <a href="#msgDistritos">Cidades</a>
+        <a href="#msgJogos">Jogos</a> 
+        <a href="#msgAbout">Sobre nós</a> 
+        <b-button id="registarBtn" v-b-modal.registarModal>Registar</b-button>
+      </div>
+
+
       <b-modal ref="registarModal" id="registarModal">
         <template #modal-header="{close}">
             <h4 class="modalTitulo">Regista-te</h4> 
             <p class="modalSubTitulo">Junta-te a nós e diverte-te com as atividades que temos preparados para ti!</p>
             <b-button @click="close" variant="info" class='fecharRegistar'>x</b-button>
         </template>
+
         <template>
           <form @submit.prevent="registar">
             <input type="url" id="foto" v-model="foto">
@@ -31,28 +36,36 @@
             <input type="password" id="passwordConfirm" v-model="passwordConfirm">
           </form>
         </template>
+
         <template #modal-footer>
             <b-button class="modalFooter" id='registar' @click='registar()'>Registar</b-button>
         </template>
+      
       </b-modal>
     </div>
-    <img id="tg" src='../assets/images/tg.svg'>
+
+    <img id="tgPrincipal" src='https://istprogg.sirv.com/tgPrincipal.svg'>
+
     <div id="loginModal"> 
        <form @submit.prevent="login">
-          <h3 id="msgLogin">Iniciar sessão</h3>
-          <input type="text" id="usernameLogin" placeholder="   Nome de utilizador" v-model="usernameLogin">
+          <h3 id="msgIS">Iniciar sessão</h3>
+          <input type="text" id="userNameLogin" placeholder="Nome de utilizador" v-model="usernameLogin">
           <br>
-          <input type="password" id="passwordLogin" placeholder="   Password" v-model="passwordLogin">
-          <p id="msgRegistate">Ainda não tens conta?<a id="msgRegistateBtn" v-b-modal.registarModal> Registas-te</a></p>
+          <input type="password" id="passwordLogin" placeholder= "Password" v-model="passwordLogin">
+          <p id="msgRegistate">Ainda não tens conta?<a id="msgRegistateBtn" v-b-modal.registarModal> Regista-te</a></p>
         </form>
-        <b-button id='loginBtn' @click='login()'>Entrar</b-button>
+        <div>
+          <b-button id='loginBtn' @click='login()'>Entrar</b-button>
+        </div>
     </div>
-    <a href="#app"><img id="setaUp" src='../assets/images/arrowup.svg'></a>
+
+
+    <a href="#app"><img id="setaUp" src='https://istprogg.sirv.com/arrowup.svg'></a>
     <div id="brownBG">
       <h3 id="msgDistritos">----------------------      Fica a saber quais são as cidades disponíveis      ----------------------</h3>
-      <img id="distritos" src='../assets/images/distritos.svg'>
+      <img id="distritos" src='https://istprogg.sirv.com/distritos.svg'>
       <h3 id="msgJogos">----------- Alguns jogos que vão testar os teus conhecimentos sobre as cidades ---------</h3>
-      <img id="jogos" src='../assets/images/jogos.svg'>
+      <img id="jogos" src='https://istprogg.sirv.com/jogos.svg'>
       <h3 id="msgAbout">-------------------------------------- Sobre nós --------------------------------------</h3>
       <div id="aboutUs">
         <h3 id="h3a">Vais viajar?</h3>
@@ -62,7 +75,7 @@
 
         <h3 id="h3a">Da ideia à realidade...</h3>
         <p id="pa">Este projeto foi desenvolvido no âmbito da disciplina "Projeto II" com a finalidade de proporcionar viagens mais desafiantes e dar a conhecer melhor as cidades do nosso país. </p>
-        <img id="plane" src='../assets/images/plane.png'>
+        <img id="plane" src='https://istprogg.sirv.com/plane.png'>
       </div> 
       <h3 id="footerRH">---------------------------------------------------------------------------------------------------------------</h3>
       <div class="row">
@@ -145,7 +158,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-image: url('../assets/images/10.png');
+  background-image: url('https://istprogg.sirv.com/background.png');
   background-attachment: fixed;
   background-size: 100%;
 }
@@ -159,32 +172,32 @@ p{
 }
 
 /* NAVBAR */
-#nav {
-  padding: 30px;
-  text-align: right;
-}
-
-#nav a {
-  font-weight: bold;
-  text-decoration: none;
+.topnav a{
+  float: left;
   color: white;
-  margin-left: 4vh;
-  font-size: 14pt;
+  font-size: 1.2em;
+  margin: 0.5vw;
 }
 
-input{
-  border-color: #3580D2;
-  border-radius: 5px;
+.topnav img{
+  position: relative;
+  top: 7vh;
+  right: 23vw;
+}
+
+.topnav button{
+  margin-left: 1vw;
+  font-size: 1em;
+}
+
+.topnav-right{
+  float: right;
+  position: relative;
+  top: 7vh;
+  right: 10vw;
 }
 
 #registarBtn {
-  position: relative;
-  right: 5vh;
-  margin-left: 10vh;
-  width: 8vw;
-  height: 6vh;
-  padding-bottom: 20px;
-  font-size: 13pt;
   background-color: #5DA9BE;
   color: white;
   border-radius: 25px;
@@ -192,60 +205,62 @@ input{
   border-width:  2px;
 }
 
-/* CSS DA IMAGEM INICIAL */
-#tg {
+input{
+  border-color: #3580D2;
+  border-radius: 5px;
+}
+
+/* CSS DA TG PRINCIPAL */
+#tgPrincipal {
   position: relative;
-  top: 24vh;
-  right: 23%;
+  top: 30vh;
+  right: 14vw;
   width: 50vh;
 }
 
-/* CSS DA IMAGEM na NAVBAR */
-#tgMenu {
-  position: relative; 
-  right: 110vh;
-}
+
 
 /* MODAL DE LOGIN */
 #loginModal {
   position: relative;
-  margin-top: -4%;
-  margin-left: 55%;
+  left: 56vw;
   color: white;
   border-color: #ffffff;
   border-width: 2px;
-  width: 35vw;
-  height: 50vh;
+  width: 33vw;
+  height: 47vh;
   background-color: #5da9be85;
   border-radius: 30px;
 }
 
-#msgLogin{
+#msgIS{
   position: relative;
-  padding-top: 35px;
-  font-size: 25pt;
+  top: 4vh;
+  font-size: 1.5em;
 }
 
-#usernameLogin{
+#userNameLogin{
   position: relative;
-  margin-top: 15px; 
-  width: 23vw;
-  height: 7vh;
-  font-size: 10pt;
+  top: 6vh;
+  padding: 1vw;
+  width: 21vw;
+  height: 6.5vh;
+  font-size: 1em;
 }
 
 #passwordLogin{
   position: relative;
-  margin-top: 15px;
-  width: 23vw;
-  height: 7vh;
-  font-size: 10pt;
+  top: 8vh;
+  padding: 1vw;
+  width: 21vw;
+  height: 6.5vh;
+  font-size: 1em;
 }
 
 #msgRegistate{
   position: relative;
-  margin-top: 10px;
-  font-size: 12pt;
+  top: 10vh;
+  font-size: 1em;
 }
 
 #msgRegistateBtn{
@@ -254,15 +269,15 @@ input{
 
 #loginBtn {
   position: relative;
-  margin-top: 5px;
+  top: 11vh;
   width: 8vw;
   height: 7vh;
-  font-size: 15pt;
+  font-size: 1.2em;
   background-color: #5DA9BE;
   color: white;
   border-radius: 25px;
   border-color: white;
-  border-width:  3px;
+  border-width: 3px;
 }
 
 /* brownBG */
